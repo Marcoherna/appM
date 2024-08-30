@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>pag1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">pag1</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-icon name="arrow-undo-outline" style="zoom: 3.0" routerLink="/home"></ion-icon>
+  
+  <ion-card>
+    
+    <img alt="ouch" src="{{parametros.imagen}}" />
+    <ion-card-header>
+      <ion-card-title>{{parametros.nombre}}</ion-card-title>
+      <ion-card-subtitle></ion-card-subtitle>
+    </ion-card-header>
+    {{parametros.descripcion}}
+    <ion-card-content>
+      
+    </ion-card-content>
+  </ion-card>
+</ion-content>

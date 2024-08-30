@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>pag2</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">pag2</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-icon name="arrow-undo-outline" style="zoom: 3.0" routerLink="/home"></ion-icon>
+  <ion-list>
+    <ion-item>
+      <ion-input label="Nombre de usuario:" [(ngModel)]="usertext"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input label="Password" type="Password" [(ngModel)]="passtext"></ion-input>
+    </ion-item>
+  
+    <ion-button (click)="refresh()">Ingresar</ion-button><br>
+
+    
+
+    
+  
+    
+  </ion-list>
+
+  
+</ion-content>
