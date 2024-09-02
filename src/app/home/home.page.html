@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title class="titulo">
-      Login
-    </ion-title>
+    <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,16 +10,21 @@
   <ion-list>
     <br><br>
     <ion-item>
-      <ion-input labelPlacement="floating"  [(ngModel)]="userText"><div slot="label">Nombre de usuario:</div></ion-input>
+      <ion-input labelPlacement="floating"  [(ngModel)]="usuario.nombre"><div slot="label">Nombre de usuario:</div></ion-input>
     </ion-item>
   
     <ion-item>
-      <ion-input labelPlacement="floating" label="Password:" type="Password" [(ngModel)]="passText"></ion-input>
+      <ion-input labelPlacement="floating" label="Password:" type="Password" [(ngModel)]="usuario.contrasenia"></ion-input>
     </ion-item>
   
     <ion-button (click)="refresh()" >Ingresar</ion-button><br>
 
+    <br><br>
+
     
+    
+  
+   
 
     
   
@@ -33,8 +36,8 @@
 
 <ion-footer>
   <ion-toolbar>
-    <ion-icon name="logo-facebook"></ion-icon>
-    <ion-icon name="logo-twitter"></ion-icon>
+    <ion-icon name="logo-facebook" size="large"></ion-icon>
+    <ion-icon name="logo-twitter" size="large"></ion-icon>
 
   </ion-toolbar>
 </ion-footer>
