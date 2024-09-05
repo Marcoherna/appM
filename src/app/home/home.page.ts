@@ -30,11 +30,7 @@ export class HomePage {
 
   constructor(private navController:NavController, private aController:AnimationController) {}
   
-
-  
-  
-
-  refresh(){
+  ingresar(){
     
     let navigationExtras:NavigationExtras ={
     queryParams:{
@@ -46,14 +42,25 @@ export class HomePage {
     
   }
 
+  recuperar(){
+    
+    let navigationExtras:NavigationExtras ={
+    queryParams:{
+      data1: this.usuario.nombre
+    }
+  };
+  this.navController.navigateForward(['/pag2'],navigationExtras);
+    
+  }
+
   ngOnInit(){}
 
   ngAfterViewInit(){
     this.animation = this.aController.create()
-    .addElement(document.querySelector('.square') as HTMLElement)
+    .addElement(document.querySelector('.logo') as HTMLElement)
     .duration(1500)
     .iterations(Infinity)
-    .fromTo('opacity','1','0.1')
+    .fromTo('transform','rotateY(0deg)','rotateY(360deg)')
     if(this.animation){
       this.animation.play();
     }else{

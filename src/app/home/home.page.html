@@ -1,6 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Login</ion-title>
+    
+    <ion-title class="titulo"><img src="assets/img/logo.png" width="60px" height="50px" class="logo">Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -17,7 +18,8 @@
       <ion-input labelPlacement="floating" label="Password:" type="Password" [(ngModel)]="usuario.contrasenia"></ion-input>
     </ion-item>
   
-    <ion-button (click)="refresh()" >Ingresar</ion-button><br>
+    <ion-button (click)="ingresar()" >Ingresar</ion-button>
+    <ion-button (click)="recuperar()">Recuperar contraseña</ion-button>
 
     <br><br>
 
@@ -36,8 +38,11 @@
 
 <ion-footer>
   <ion-toolbar>
-    <ion-icon name="logo-facebook" size="large"></ion-icon>
+    
+    <ion-icon name="logo-facebook" size="large" icon-align="center"></ion-icon>
     <ion-icon name="logo-twitter" size="large"></ion-icon>
+    <ion-icon name="logo-instagram" size="large"></ion-icon>
+    
 
   </ion-toolbar>
 </ion-footer>
