@@ -5,9 +5,17 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">pag4</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-icon name="arrow-undo-outline" style="zoom: 3.0" routerLink="/home" class="flecha4"></ion-icon>
+  <br><br>
+  <h1 class="title">Registro de ruta</h1>
+  <br>
+  <ion-input labelPlacement="floating" label="Nombre conductor: "></ion-input>
+  <ion-input labelPlacement="floating" label="Numero de telefono: "></ion-input>
+  <ion-input labelPlacement="floating" label="Marca del vehículo: "></ion-input>
+  <ion-input labelPlacement="floating" label="Modelo del vehículo: "></ion-input>
+  <ion-input labelPlacement="floating" label="Patente del vehículo: "></ion-input>
+  <ion-input labelPlacement="floating" label="Color del vehículo: "></ion-input>
+  <ion-input labelPlacement="floating" label="Asientos disponibles del vehículo: "></ion-input>
+  <ion-input labelPlacement="floating" label="Ruta del vehículo: "></ion-input>
+  <ion-button (click)="registrarRuta()">Registrar ruta</ion-button>
 </ion-content>
