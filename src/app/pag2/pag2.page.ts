@@ -12,6 +12,7 @@ import { AnimationController } from '@ionic/angular';
 export class Pag2Page implements OnInit {
 
   private animation2?:Animation;
+  private animationf2?:Animation;
 
   constructor(private aController:AnimationController) { }
 
@@ -36,7 +37,24 @@ export class Pag2Page implements OnInit {
     }else{
       alert("Error, ups, no se que ocurre")
     }
+
+    
+      this.animationf2 = this.aController.create()
+      .addElement(document.querySelector('.flecha2') as HTMLElement)
+      .duration(1500)
+      .iterations(Infinity)
+      .keyframes([
+        { offset: 0, transform: 'rotate(0)' },
+        { offset: 0.5, transform: 'rotate(15deg)' },
+        { offset: 1, transform: 'rotate(0)' },
+      ]);
+      if(this.animationf2){
+        this.animationf2.play();
+      }else{
+        alert("Error, ups, no se que ocurre")
+      }
   }
+
 
   ngOnDestroy(){}
 

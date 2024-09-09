@@ -66,7 +66,11 @@ export class HomePage {
     .addElement(document.querySelector('.siguenos') as HTMLElement)
     .duration(1500)
     .iterations(Infinity)
-    .fromTo('transform','scale(1)','scale(1.5)')
+    .keyframes([
+      { offset: 0, transform: 'scale(1)' },
+      { offset: 0.5, transform: 'scale(1.2)' },
+      { offset: 1, transform: 'scale(1)' },
+    ]);
     if(this.animation0){
       this.animation0.play();
     }else{

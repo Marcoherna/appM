@@ -1,6 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>pag1</ion-title>
+    <ion-title class="titulo1"><img src="assets/img/logo.png" width="60px" height="50px" class="logo1"></ion-title>
+  
   </ion-toolbar>
 </ion-header>
 
@@ -10,8 +11,15 @@
       <ion-title size="large">pag1</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-icon name="arrow-undo-outline" style="zoom: 3.0" routerLink="/home"></ion-icon>
+  <ion-icon name="arrow-undo-outline" style="zoom: 3.0" routerLink="/home" class="flecha1"></ion-icon>
   
-  <h1>Bienvenido {{parametros.usuario}}</h1>
+  <h1 class="tituloPag1">Bienvenido {{parametros.usuario}}</h1>
+  <br><br>
+  <div class="botones" >
+    <ion-button><img src="assets/img/share.png" alt="Ups" width="50px">Compartir Vehículo</ion-button>
+    <br><br><br>
+    <ion-button><img src="assets/img/buscar.png" alt="Ups" width="50px">Buscar vehículo</ion-button>
+  </div> 
+  
   
 </ion-content>

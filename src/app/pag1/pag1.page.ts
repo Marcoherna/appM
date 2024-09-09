@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Animation } from '@ionic/angular';
+import { AnimationController } from '@ionic/angular';
 
 @Component({
   selector: 'app-pag1',
@@ -8,9 +10,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class Pag1Page implements OnInit {
 
+  private animation1?:Animation;
+
   parametros = {usuario:"",contrasenia:""}
 
-  constructor(private activatedRoute:ActivatedRoute) { }
+  constructor(private activatedRoute:ActivatedRoute, private aController:AnimationController) { }
 
   ngOnInit() {
     this.activatedRoute.queryParams.subscribe(params => {
@@ -23,6 +27,18 @@ export class Pag1Page implements OnInit {
     })
   }
 
+  ngAfterViewInit(){
+    this.animation1 = this.aController.create()
+    .addElement(document.querySelector('.logo1') as HTMLElement)
+    .duration(1500)
+    .iterations(Infinity)
+    .fromTo('transform','rotateY(0deg)','rotateY(360deg)')
+    if(this.animation1){
+      this.animation1.play();
+    }else{
+      alert("Error, ups, no se que ocurre")
+    }
+  }
   
 
 }
