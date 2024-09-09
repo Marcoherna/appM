@@ -11,12 +11,6 @@ import { AnimationController } from '@ionic/angular';
 })
 export class HomePage {
 
-  
-
-  mensaje(){
-    alert("Hola")
-  }
-
 
   usuario = {
     nombre:"",
@@ -27,6 +21,7 @@ export class HomePage {
   
 
   private animation?:Animation;
+  private animation0?:Animation;
 
   constructor(private navController:NavController, private aController:AnimationController) {}
   
@@ -65,6 +60,17 @@ export class HomePage {
       this.animation.play();
     }else{
       alert("Error, ups, no se que ocurre")
+    }
+
+    this.animation0 = this.aController.create()
+    .addElement(document.querySelector('.siguenos') as HTMLElement)
+    .duration(1500)
+    .iterations(Infinity)
+    .fromTo('transform','scale(1)','scale(1.5)')
+    if(this.animation0){
+      this.animation0.play();
+    }else{
+      alert("Error animacion siguenos")
     }
   }
 

@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>pag2</ion-title>
+    <ion-title class="titulo"><img src="assets/img/logo.png" width="60px" height="50px" class="logo2"></ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,15 +12,14 @@
   </ion-header>
   <ion-icon name="arrow-undo-outline" style="zoom: 3.0" routerLink="/home"></ion-icon>
   <ion-list>
+    <h1 class="tituloPag">Recuperación de contraseña</h1><br>
     <ion-item>
-      <ion-input label="Nombre de usuario:" [(ngModel)]="usertext"></ion-input>
+      <ion-input label="Ingrese su email:" [(ngModel)]="email"></ion-input>
     </ion-item>
   
-    <ion-item>
-      <ion-input label="Password" type="Password" [(ngModel)]="passtext"></ion-input>
-    </ion-item>
+    
   
-    <ion-button (click)="refresh()" >Ingresar</ion-button><br>
+    <ion-button (click)="recuperar()" >Recuperar</ion-button><br>
 
     
 
