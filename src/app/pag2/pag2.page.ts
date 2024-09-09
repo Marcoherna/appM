@@ -14,13 +14,19 @@ export class Pag2Page implements OnInit {
   private animation2?:Animation;
   private animationf2?:Animation;
 
-  constructor(private aController:AnimationController) { }
+  constructor(private navController:NavController, private aController:AnimationController) { }
 
   email: string = "";
 
   recuperar(){
     
-    alert("Se envió un código a su correo")
+    let navigationExtras:NavigationExtras ={
+      queryParams:{
+        data1: this.email,
+        
+      }
+    };
+    this.navController.navigateForward(['/pag3'],navigationExtras);
     
   }
 
